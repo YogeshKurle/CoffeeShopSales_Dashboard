@@ -63,26 +63,26 @@ Manual reporting made it difficult to gain quick and reliable insights.
 
 ## 📐 Key DAX Measures
 ```DAX
-Total Sales =
-SUM(FactSales[SalesAmount])
+Total Sales = 
+SUM(Transactions[Sales])
 
-Total Orders =
-COUNT(FactSales[OrderID])
+Total Orders = 
+DISTINCTCOUNT(Transactions[transaction_id])
 
-Total Quantity Sold =
-SUM(FactSales[Quantity])
+Total Quantity Sold = 
+SUM(Transactions[transaction_qty])
 
 Sales Last Month =
-CALCULATE(
-    [Total Sales],
-    DATEADD(DimDate[Date], -1, MONTH)
-)
+CALCULATE( [CM Orders], DATEADD('Date Table'[Date],-1,MONTH) )
 
-Sales MoM % =
-DIVIDE(
-    [Total Sales] - [Sales Last Month],
-    [Sales Last Month]
-)
+Sales MoM for Sales =
+    VAR month_diff = [CM Sales] - [PM Sales]
+    VAR MoM = ([CM Sales]-[PM Sales])/[PM Sales]
+    VAR _sign = IF(month_diff > 0, "+", "")
+    VAR _sign_trend = IF(month_diff > 0, "▲", "▼")
+    RETURN
+    IF (ISBLANK([PM Sales]) || [PM Sales] = 0,"No Value", 
+    _sign_trend & " " & _sign & FORMAT(MoM,"#0.0%"))
 
 Avg Daily Sales =
 AVERAGEX(
