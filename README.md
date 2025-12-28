@@ -1,10 +1,13 @@
-# ☕ Coffee Shop Sales Performance Dashboard | Power BI
+# <img width="30" height="30" alt="coffee-cup" src="https://github.com/user-attachments/assets/def9a39e-e460-43a8-b533-a6b8a5486ef2" /> Coffee Shop Sales Performance Dashboard | Power BI
 
 ## 📌 Project Overview
 This project showcases an end-to-end **Power BI Sales Analytics Dashboard** built for a multi-location coffee shop.  
 The dashboard provides actionable insights into **sales performance, customer demand patterns, product popularity, and store-level efficiency**, enabling data-driven business decisions.
 
----
+
+
+<img width="1209" height="735" alt="Coffee_Shop_Sales_Dashboard_img" src="https://github.com/user-attachments/assets/206b3a13-7ec1-41ca-a8da-b95d79887f30" />
+
 
 ## 🔍 Business Problem
 The coffee shop management faced challenges in:
@@ -29,21 +32,20 @@ Manual reporting made it difficult to gain quick and reliable insights.
 
 ---
 
-## 🖼 Dashboard Preview
-<img width="1209" height="735" alt="Coffee_Shop_Sales_Dashboard_img" src="https://github.com/user-attachments/assets/206b3a13-7ec1-41ca-a8da-b95d79887f30" />
-
-
----
-
-## 📊 Key KPIs
-- **Total Sales:** $119K (+20.3% vs Last Month)
+## 📊 Key KPIs & Visual Highlights
+- **Total Sales:** $119K (+20.3% vs previous month)
 - **Total Orders:** 25,335 (+19.3%)
 - **Total Quantity Sold:** 36,469 (+19.9%)
-- **Average Daily Sales:** $3,965
-- **Weekday Contribution:** 66.9%
-- **Weekend Contribution:** 33.1%
 
----
+- **Calendar Heat Map:**  
+  Visualizes daily sales performance using gradient color intensity to quickly identify high- and low-performing days.
+
+- **Average Daily Sales:**  
+  Displays average daily revenue segmented by product category and product type to understand demand patterns.
+
+- **Sales by Store Location:**  
+  Custom double bar chart where the first bar acts as a label placeholder, enabling clear display of store names alongside their corresponding sales values.
+
 
 ## 🧠 Data Model & Architecture
 - **Star Schema** design for optimized analytics
